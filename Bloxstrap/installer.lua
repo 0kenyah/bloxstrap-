@@ -1,3 +1,8 @@
+getgenv().autosetup = {
+    path = "Bloxstrap",
+    setup = true
+}
+
 local basePath = autosetup.path or "Bloxstrap"
 
 if not isfolder(basePath) then
@@ -8,7 +13,9 @@ local clientSettings = basePath .. "/ClientSettings"
 if not isfolder(clientSettings) then
     makefolder(clientSettings)
 end
+
 local settingsPath = clientSettings .. "/ClientAppSettings.json"
+
 local MAX_FFLAG_SIZE = 100 * 1024
 
 local function safeReadFile(path)
@@ -40,12 +47,7 @@ local function safeDecode(json)
     return result
 end
 
-getgenv().autosetup = {
-    path = 'Bloxstrap',
-    setup = true
-}
-
 loadstring(game:HttpGet(
-    'https://raw.githubusercontent.com/0kenyah/bloxstrap-/refs/heads/main/instalar.lua,
+    "https://raw.githubusercontent.com/0kenyah/bloxstrap-/main/installer.lua",
     true
 ))()
