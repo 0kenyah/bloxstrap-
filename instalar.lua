@@ -4,6 +4,6 @@ getgenv().autosetup = {
 }
 
 loadstring(game:HttpGet(
-    'https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/refs/heads/main/installer.lua',
+    'https://raw.githubusercontent.com/0kenyah/bloxstrap-/refs/heads/main/instalar.lua,
     true
 ))()
