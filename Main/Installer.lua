@@ -21,7 +21,7 @@ ensureFolder(clientSettings)
 
 local settingsPath = clientSettings .. "/ClientAppSettings.json"
 
-local MAX_FFLAG_SIZE = 100 * 1024
+local MAX_FFLAG_SIZE = 230 * 1024
 
 local function safeRead(path)
     if not isfile(path) then return nil end
