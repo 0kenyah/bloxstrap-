@@ -1,3 +1,14 @@
+local basePath = autosetup.path or "Bloxstrap"
+
+if not isfolder(basePath) then
+    makefolder(basePath)
+end
+
+local clientSettings = basePath .. "/ClientSettings"
+if not isfolder(clientSettings) then
+    makefolder(clientSettings)
+end
+local settingsPath = clientSettings .. "/ClientAppSettings.json"
 local MAX_FFLAG_SIZE = 100 * 1024
 
 local function safeReadFile(path)
