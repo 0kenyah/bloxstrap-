@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 
-local MAX_FFLAG_SIZE = 100 * 1024
+local MAX_FFLAG_SIZE = 230 * 1024
 
 local function clamp(n, min, max)
     if n < min then return min end
