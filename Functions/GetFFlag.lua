@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 
-local MAX_FFLAG_SIZE = 100 * 1024
+local MAX_FFLAG_SIZE = 230 * 1024
 
 return function(path, key)
     if not isfile(path) then
