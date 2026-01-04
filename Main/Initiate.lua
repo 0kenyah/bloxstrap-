@@ -1,4 +1,4 @@
 loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/Main/installer.lua",
+    "https://raw.githubusercontent.com/0kenyah/bloxstrap-/main/Main/Installer.lua",
     true
 ))()
