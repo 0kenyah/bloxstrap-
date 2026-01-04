@@ -2,14 +2,16 @@ local HttpService = game:GetService("HttpService")
 
 local basePath = autosetup and autosetup.path or "Bloxstrap"
 
-if not isfolder(basePath) then
-    makefolder(basePath)
+local function ensureFolder(path)
+    if not isfolder(path) then
+        makefolder(path)
+    end
 end
 
+ensureFolder(basePath)
+
 local clientSettings = basePath .. "/ClientSettings"
-if not isfolder(clientSettings) then
-    makefolder(clientSettings)
-end
+ensureFolder(clientSettings)
 
 local settingsPath = clientSettings .. "/ClientAppSettings.json"
 
@@ -59,6 +61,10 @@ local function sanitize(flags)
     end
 
     return out
+end
+
+if not isfile(settingsPath) then
+    writefile(settingsPath, "{}")
 end
 
 local raw = safeRead(settingsPath)
