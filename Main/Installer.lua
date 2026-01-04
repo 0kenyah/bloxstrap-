@@ -1,3 +1,9 @@
+local base = "https://raw.githubusercontent.com/0kenyah/bloxstrap-/main/Main/Functions/"
+
+local GetFFlag = loadstring(game:HttpGet(base .. "GetFFlag.lua"))()
+local ToggleFFlag = loadstring(game:HttpGet(base .. "ToggleFFlag.lua"))()
+local GuiLibrary = loadstring(game:HttpGet(base .. "GuiLibrary.lua"))()
+
 local HttpService = game:GetService("HttpService")
 
 local basePath = autosetup and autosetup.path or "Bloxstrap"
